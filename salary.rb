@@ -18,6 +18,6 @@ get '/' do
   end
 
   @full_date = curr_salary_date.strftime("%A, %d %B %Y")
-  
+
   erb :index
 end
