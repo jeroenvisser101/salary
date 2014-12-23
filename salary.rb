@@ -14,7 +14,7 @@ get '/' do
   curr_salary_date = Date.new(Date.today.year, Date.today.month, salary_day)
 
   unless curr_salary_date.working_day?
-    curr_salary_date = curr_salary_date - 1.working.day
+    curr_salary_date -= 1.working.day
   end
 
   @full_date = curr_salary_date.strftime("%A, %d %B %Y")
