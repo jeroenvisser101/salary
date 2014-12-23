@@ -10,9 +10,9 @@ get '/' do
     Date.new(Date.today.year, 01, 01)
   ]
 
-  @curr_salary_date = Date.new(Date.today.year, Date.today.month, 26)
+  @salary_date = Date.new(Date.today.year, Date.today.month, 26)
 
-  @curr_salary_date -= 1.working.day unless @curr_salary_date.working_day?
+  @salary_date -= 1.working.day unless @salary_date.working_day?
 
   erb :index
 end
