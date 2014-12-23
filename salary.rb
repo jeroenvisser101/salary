@@ -17,7 +17,7 @@ get '/' do
     curr_salary_date -= 1.working.day
   end
 
-  @full_date = curr_salary_date.strftime("%A, %d %B %Y")
+  @full_date = curr_salary_date
 
   erb :index
 end

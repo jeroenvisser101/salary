@@ -11,7 +11,7 @@
 </head>
 
 <body>
-<h1>This month you will get your salary on <span class="date"><%= @full_date %></span></h1>
+<h1>This month you will get your salary on <span class="date"><%= @full_date.strftime("%A, %d %B %Y") %></span></h1>
 <p class="disclaimer">The calculated date is only an indication!</p>
 </body>
 
