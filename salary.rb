@@ -12,7 +12,7 @@ get '/' do
 
   @salary_date = Date.new(Date.today.year, Date.today.month, 26)
 
-  @salary_date -= 1.working.day unless @salary_date.working_day?
+  @salary_date = @salary_date.return_to_working_time unless @salary_date.working_day?
 
   erb :index
 end
